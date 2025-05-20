@@ -1,3 +1,2 @@
-# Website-Template
-
-<--Atria-->
+# Atria
+## A Medical Website for Medical Students
