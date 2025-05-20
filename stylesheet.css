@@ -1,0 +1,614 @@
+
+body{
+    transition: all 2s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    opacity: 0.5;
+}
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bg-color{
+    background-color: yellowgreen;
+    background-blend-mode: overlay;
+}
+
+.bg-color-1{
+    background-color: tomato;
+    background-blend-mode: overlay;
+}
+
+.banner .content{
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner .content h1{
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 80px;
+    animation-name: derive;
+    animation-duration: 1s;
+}
+
+@keyframes derive{
+    from{
+        margin-top: 60px;
+    }
+
+    to{
+        margin-top: 0px;
+    }
+}
+
+.banner .content p{
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 20px;
+    animation-name: derive_1;
+    animation-duration: 3s;
+}
+
+.banner .content a img{
+    margin-top: 50px;
+    height: 50px;
+    width: 180px;
+}
+
+@keyframes derive_1{
+    from{
+        margin-top: 30px;
+    }
+
+    to{
+        margin-top: 0px;
+    }
+}
+
+@import "bourbon";
+
+        svg{
+          position: relative;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        
+        .beat-loader{
+          stroke: white;
+          stroke-dasharray: 175;
+          stroke-dashoffset: 350;
+          animation-name: draw;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+        }
+        
+        @keyframes draw{
+          to{
+            stroke-dashoffset: 0;
+          }
+        }
+
+/* .line_1{
+    border: 1px solid white;
+    animation-name: ext;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ext{
+    from{
+        width: 25%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@media(max-width: 296px){
+    .line_1{
+        margin-left: 30px;
+        margin-right: 30px;
+        animation-name: ext_1;
+        animation-duration: 2s;
+        animation-direction: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes ext_1{
+    from{
+        margin-right: 150px;
+    }
+
+    to{
+        margin-right: 30px;
+    }
+} */
+
+/* Navbar Styling */
+
+.title{
+    color: white;
+    padding-left: 35px;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 40px;
+}
+
+.nav{
+    margin-right: 30px;
+}
+
+.nav-link{
+    color: rgb(223, 223, 223);
+    padding-left: 30px;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: white;
+    animation-name: shift;
+    animation-duration: 1s;
+}
+
+@keyframes shift{
+    from{
+        margin-right: -2px;
+    }
+
+    to{
+        margin-right: 0px;
+    }
+}
+
+@media(max-width:416px){
+    .nav{
+        margin-right: 10px;
+    }
+}
+
+@media(max-width:397px){
+    .nav-link{
+        padding-left: 10px;
+    }
+}
+
+@media(max-width: 356px){
+    .title{
+        padding-left: 25px;
+        font-size: 20px;
+    }
+
+    .nav-link{
+        padding-left: 6px;
+    }
+}
+
+@media(max-width:293px){
+     .title{
+         padding-left: 9px;
+     }
+}
+
+/* Offcanvas Styling */
+
+.offcanvas{
+    width: 100%;
+    transition-duration: 0.6s;
+    background-color: black;
+    color: white;
+}
+
+.offcanvas-title{
+    font-size: 40px;
+}
+
+.offcanvas-menu{
+    margin-inline-start: auto;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.offcanvas-element{
+    display: block;
+    color: rgb(146, 146, 146);
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.offcanvas-element:hover{
+    color: white;
+}
+
+.element{
+    border-bottom: 1px solid white;
+    animation-name: ln;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ln{
+    from{
+        margin-right: 80px;
+    }
+
+    to{
+        padding-right: 0px;
+    }
+}
+
+.offcanvas-body{
+    margin-top: 45vh;
+    height: fit-content;
+}
+
+#MyTg{
+   background: transparent;
+   display: inline-block;
+   position: relative;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 10px;
+   padding-right: 10px;
+   cursor: pointer;
+}
+
+.circle{
+    width: 20px;
+    height: 4px;
+    position: relative;
+}
+
+.line{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.6px;
+    transition: all cubic-bezier(0.26,0.1,0.27,1.55) 0.35s;
+}
+
+.top{
+    top: 18%;
+    animation-name: inc;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.middle{
+    top: 48%;
+    margin-top: 2px;
+    animation-name: dec;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.bottom{
+    top: 78%;
+    margin-top: 4px;
+    animation-name: inc;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes inc{
+    0%{
+        width: 50%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes dec{
+    0%{
+        width: 100%;
+    }
+
+    100%{
+        width: 50%;
+    }
+}
+
+/* What is atria */
+
+.line_left{
+    border-bottom: 2px solid white;
+    margin-top: 30px;
+    margin-left: 100px;
+    animation-name: left_0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.line_right{
+    border-bottom: 2px solid white;
+    margin-top: 30px;
+    margin-right: 100px;
+    animation-name: right_0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes left_0{
+    from{
+        margin-left: 300px;
+    }
+
+    to{
+        margin-left: 100px;
+    }
+}
+
+@keyframes right_0{
+    from{
+        margin-right: 300px;
+    }
+
+    to{
+        margin-right: 100px;
+    }
+}
+
+.logo_1{
+    color: white;
+    font-size: 50px;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+@media(max-width:991px){
+    @keyframes left_0{
+        from{
+            margin-left: 200px;
+        }
+    
+        to{
+            margin-left: 100px;
+        }
+    }
+
+    @keyframes right_0{
+        from{
+            margin-right: 200px;
+        }
+    
+        to{
+            margin-right: 100px;
+        }
+    }
+}
+
+@media(max-width:767px){
+    .logo_1{
+        font-size: 40px;
+    }
+
+    @keyframes left_0{
+        from{
+            margin-left: 150px;
+        }
+    
+        to{
+            margin-left: 50px;
+        }
+    }
+
+    @keyframes right_0{
+        from{
+            margin-right: 150px;
+        }
+    
+        to{
+            margin-right: 50px;
+        }
+    }
+}
+
+@media(max-width:538px){
+    .logo_1{
+        font-size: 30px;
+    }
+
+    @keyframes left_0{
+        from{
+            margin-left: 100px;
+        }
+    
+        to{
+            margin-left: 50px;
+        }
+    }
+
+    @keyframes right_0{
+        from{
+            margin-right: 100px;
+        }
+    
+        to{
+            margin-right: 50px;
+        }
+    }
+}
+
+@media(max-width:416px){
+    .logo_1{
+        font-size: 25px;
+    }   
+}
+
+@media(max-width:385px){
+
+    @keyframes left_0{
+        from{
+            margin-left: 70px;
+        }
+    
+        to{
+            margin-left: 20px;
+        }
+    }
+
+    @keyframes right_0{
+        from{
+            margin-right: 70px;
+        }
+    
+        to{
+            margin-right: 20px;
+        }
+    }
+}
+
+@media(max-width:385px){
+    .logo_1{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:309px){
+
+    @keyframes left_0{
+        from{
+            margin-left: 50px;
+        }
+    
+        to{
+            margin-left: 20px;
+        }
+    }
+
+    @keyframes right_0{
+        from{
+            margin-right: 50px;
+        }
+    
+        to{
+            margin-right: 20px;
+        }
+    }
+}
+
+@media(max-width:309px){
+      .logo_1{
+          font-size: 15px;
+      }
+
+      .line_left{
+         margin-top: 15px;
+      }
+
+      .line_right{
+        margin-top: 15px;
+     }
+}
+
+
+.txt_style{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.txt_1_style{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.txt_2_style{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.pos{
+    margin-top: 80px;
+}
+
+@media(max-width:1199px){
+    .txt_2_style{
+        font-size: 40px;
+    }
+
+    .txt_1_style{
+        font-size: 32px;
+    }
+
+    .txt_style{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:991px){
+    .txt_2_style{
+        font-size: 32.5px;
+    }
+
+    .txt_1_style{
+        font-size: 26px;
+    }
+
+    .txt_style{
+        font-size: 13px;
+    }
+}
+
+/* Footer Styling */
+
+footer{
+    background-color: black;
+}
+
+footer div div h4{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
